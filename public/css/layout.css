@@ -108,13 +108,13 @@
         width: 200px;
       }
     
+
     /********************
     * Main
     ******/
       main {
         float: right;
         outline: 1px solid black;
-        outline-offset: -1px;
         width: 760px;
       }
 
@@ -123,16 +123,14 @@
         height: 200px;
         line-height: 200px;
         outline: 1px solid black;
-        outline-offset: -1px;
         width: 380px;
       }
 
       main section:nth-of-type(3), section:nth-of-type(4), section:nth-of-type(5), section:nth-of-type(6) {
-        display: inline-block;
+        float: left;
         height: 250px;
         line-height: 250px;
         outline: 1px solid black;
-        outline-offset: -1px;
         width: 190px;
       }
 
