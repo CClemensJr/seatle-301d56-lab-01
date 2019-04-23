@@ -80,9 +80,14 @@
 ******/
   @media (min-width: 768px)
   {
-    body {
+    /* body {
       max-width: 960px;
       min-width: 768px;
+    } */
+
+    div {
+      margin: 0 auto;
+      width: 960px;
     }
 
     /********************
@@ -139,7 +144,7 @@
     * Footer
     ******/
       footer {
-        float: right;
+        float: left;
         height: 150px;
         line-height: 150px;
         margin-bottom: 25px;
