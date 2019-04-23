@@ -78,16 +78,69 @@
 /********************
 * Desktop
 ******/
-  /********************
-  * Header
-  ******/
+  @media (min-width: 768px)
+  {
+    /********************
+    * Header
+    ******/
+      header {
+        height: 75px;
+        line-height: 75px;
+        margin: 0 auto;
+        outline: 1px solid black;
+        width: 480px;
+      }
 
 
-  /********************
-  * Main
-  ******/
+    /********************
+    * Aside
+    ******/
+      aside {
+        height: 150px;
+        line-height: 150px;
+        margin: 0 auto;
+        outline: 1px solid black;
+        width: 480px;
+      }
+    
+    /********************
+    * Main
+    ******/
+      main {
+        margin: 0 auto;
+        outline: 1px solid black;
+        width: 480px;
+      }
 
+      main section:nth-of-type(1), section:nth-of-type(2) {
+        height: 125px;
+        line-height: 125px;
+        outline: 1px solid black;
+      }
 
-  /********************
-  * Footer
-  ******/
+      main section:nth-of-type(3), section:nth-of-type(4), section:nth-of-type(5), section:nth-of-type(6) {
+        height: 250px;
+        line-height: 250px;
+        outline: 1px solid black;
+        width: 240px;
+      }
+
+      main section:nth-of-type(3), section:nth-of-type(5) {
+        float: left;
+      }
+
+      main section:nth-of-type(4), section:nth-of-type(6) {
+        float: right;
+      }
+
+    /********************
+    * Footer
+    ******/
+      footer {
+        height: 80px;
+        line-height: 80px;
+        margin: 501px auto 25px auto;
+        outline: 1px solid black;
+        width: 480px;
+      }
+  }
