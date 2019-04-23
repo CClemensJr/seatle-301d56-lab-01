@@ -1,111 +1,44 @@
-/********************
-* Header
-******/
-  header {
-    background: lightblue;
-    display: flex;
-    flex-direction: row;
-    height: 10vh;
-    justify-content: center;
-    line-height: 10vh;
-    min-width: 100vw;
-  }
-
-  header h1 {
-    margin-left: 20vw;
-    margin-right: auto;
-  }
-  header nav {
-    margin-right: 20vw;
-  }
-
-  header nav ul {
-    display: flex;
-  }
-
-  header nav ul li {
-    display: block;
-    padding: 0 .25em;
-    text-align: center;
-  }
-
-  header nav ul li ul {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  header nav ul li:hover > ul, ul li ul:hover {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-  }
 
 /********************
-* Main
+* Mobile
 ******/
-  main {
-    background: lightcoral;
-    display: flex;
-    flex-direction: column;
-    min-width: 100vw;
+  @media (max-width: 767px)
+  {
+    /********************
+    * Header
+    ******/
+      
+  
+    /********************
+    * Main
+    ******/
+  
+  
+    /********************
+    * Footer
+    ******/
+
   }
 
-  main #section1, #section2, #section3 {
-    flex: 1;
-    min-height: 100vh;
-  }
 
-  main #section1 {
-    background: lightgoldenrodyellow;
-  }
 
-  main #section1 section {
-    margin: 10vh auto;
-    max-width: 50vw;
-  }
+/* ************************************************************************************** */
 
-  main #section1 section:first-of-type {
-    background: lightseagreen;
-    text-align: center;
-  }
 
-  main #section1 section:first-of-type h1, h2 {
-    padding: 7vh 7vw;
-  }
-
-  main #section1 section:last-of-type {
-    display: flex;
-    padding: 5vh 5vw;
-  }
-
-  main #section1 section:last-of-type a:first-of-type {
-    margin-left: 10vw;
-    margin-right: auto;
-  }
-
-  main #section1 section:last-of-type a:last-of-type {
-    margin-right: 10vw;
-  }
-
-  main #section1 section:last-of-type {
-    background: lightpink;
-  }
-
-  main #section2 {
-    background: lightgreen;
-  }
-
-  main #section3 {
-    background: lightcyan;
-  }
 
 /********************
-* Footer
+* Desktop
 ******/
-  footer {
-    display: flex;
-    flex-direction: row;
-    height: 5vh;
-    line-height: 5vh;
-  }
+  /********************
+  * Header
+  ******/
+
+
+  /********************
+  * Main
+  ******/
+
+
+  /********************
+  * Footer
+  ******/
