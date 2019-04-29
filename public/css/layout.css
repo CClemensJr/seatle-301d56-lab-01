@@ -5,22 +5,22 @@
   /********************
   * Grid Areas
   ******/
-    .header { grid-area: a; }
-    .aside { grid-area: b; }
-    main section:nth-of-type(1) { grid-area: c; }
-    main section:nth-of-type(2) { grid-area: d; }
-    main section:nth-of-type(3) { grid-area: e; }
-    main section:nth-of-type(4) { grid-area: f; }
-    main section:nth-of-type(5) { grid-area: g; }
-    main section:nth-of-type(6) { grid-area: h; }
-    .main { grid-area: main; }
-    .footer {grid-area: i; }
-
-/********************
-* Mobile
-******/
+  
+  /********************
+  * Mobile
+  ******/
   @media (max-width: 768px)
   {
+    .header { grid-area: a; }
+    .aside { grid-area: b; }
+    .section1 { grid-area: c; }
+    .section2 { grid-area: d; }
+    .section3 { grid-area: e; }
+    .section4 { grid-area: f; }
+    .section5 { grid-area: g; }
+    .section6 { grid-area: h; }
+    .footer {grid-area: i; }
+
     /********************
     * Base Grid
     ******/
@@ -28,10 +28,13 @@
         align-items: center;
         display: grid;
         grid-template-areas:
-        "a"
-        "b"
-        "main"
-        "i";
+        "a a"
+        "b b"
+        "c c"
+        "d d"
+        "e f"
+        "g h"
+        "i i";
       }
 
     /********************
@@ -68,54 +71,37 @@
 ******/
   @media (min-width: 768px)
   {
+    .header { grid-area: a; }
+    .aside { grid-area: b; }
+    .section1 { grid-area: c; }
+    .section2 { grid-area: d; }
+    .section3 { grid-area: e; }
+    .section4 { grid-area: f; }
+    .section5 { grid-area: g; }
+    .section6 { grid-area: h; }
+    .footer {grid-area: i; }
+    
     /********************
     * Base Grid
     ******/
       .wrapper {
-        align-items: center;
         display: grid;
-        grid-template-columns: repeat(12, [col-start] 1fr);
-        grid-template-rows: 4fr;
-      }
-
-    /********************
-    * Header Grid
-    ******/
-      .header {
-        grid-column: col-start / span 10;
-      }
-      
-    
-    /********************
-    * Aside Grid
-    ******/
-      .aside {
-        grid-column: col-start / span 2;
-        grid-row: 2 / 4;
-      }
-
-    /********************
-    * Main Grid
-    ******/
-      .main 
-    /********************
-    * Content Grid
-    ******/
-      /* .main {
-        display: grid;
-        grid-template-columns: 4fr;
         grid-template-areas:
-        "c c d d"
-        "e f g h"; 
-      } */
+        'a a a a a'
+        'b c c d d'
+        'b e f g h'
+        'b i i i i';
+
+        grid-template-columns: auto auto auto;
+      }
       
     /********************
     * Grid item dimensions
     ******/
-      /* header, aside, section, footer {
+      header, aside, section, footer {
         align-items: center;
         display: flex;
         height: 15vh;
         justify-content: center;
-      } */
+      }
   }
