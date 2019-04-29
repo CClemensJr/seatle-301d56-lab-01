@@ -2,71 +2,61 @@
 /********************
 * Mobile
 ******/
+header { grid-area: a; }
+aside { grid-area: b; }
+main section:nth-of-type(1) { grid-area: c; }
+main section:nth-of-type(2) { grid-area: d; }
+main section:nth-of-type(3) { grid-area: e; }
+main section:nth-of-type(4) { grid-area: f; }
+main section:nth-of-type(5) { grid-area: g; }
+main section:nth-of-type(6) { grid-area: h; }
+footer {grid-area: i; }
+
+
+/********************
+* Mobile
+******/
   @media (max-width: 768px)
   {
+    /* 
+    a
+    b
+    c
+    d
+    e f
+    g h
+    i */
+    /********************
+    * General
+    ******/
+      
+      div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+      }
+
     /********************
     * Header
     ******/
-      header {
-        height: 75px;
-        line-height: 75px;
-        margin: 0 auto;
-        outline: 1px solid black;
-        width: 480px;
-      }
   
 
     /********************
     * Aside
     ******/
-      aside {
-        height: 150px;
-        line-height: 150px;
-        margin: 0 auto;
-        outline: 1px solid black;
-        width: 480px;
-      }
+      
     
     /********************
     * Main
     ******/
-      main {
-        margin: 0 auto;
-        outline: 1px solid black;
-        width: 480px;
-      }
 
-      main section:nth-of-type(1), section:nth-of-type(2) {
-        height: 125px;
-        line-height: 125px;
-        outline: 1px solid black;
-      }
-  
-      main section:nth-of-type(3), section:nth-of-type(4), section:nth-of-type(5), section:nth-of-type(6) {
-        height: 250px;
-        line-height: 250px;
-        outline: 1px solid black;
-        width: 240px;
-      }
-
-      main section:nth-of-type(3), section:nth-of-type(5) {
-        float: left;
-      }
-
-      main section:nth-of-type(4), section:nth-of-type(6) {
-        float: right;
-      }
+    
   
     /********************
     * Footer
     ******/
-      footer {
-        height: 80px;
-        line-height: 80px;
-        margin: 501px auto 25px auto;
-        outline: 1px solid black;
-        width: 480px;
-      }
+
   }
 
 
