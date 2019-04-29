@@ -2,6 +2,19 @@
 /********************
 * General
 ******/
+  /********************
+  * Grid Areas
+  ******/
+    .header { grid-area: a; }
+    .aside { grid-area: b; }
+    main section:nth-of-type(1) { grid-area: c; }
+    main section:nth-of-type(2) { grid-area: d; }
+    main section:nth-of-type(3) { grid-area: e; }
+    main section:nth-of-type(4) { grid-area: f; }
+    main section:nth-of-type(5) { grid-area: g; }
+    main section:nth-of-type(6) { grid-area: h; }
+    .main { grid-area: main; }
+    .footer {grid-area: i; }
 
 /********************
 * Mobile
@@ -9,30 +22,16 @@
   @media (max-width: 768px)
   {
     /********************
-    * Grid Areas
-    ******/
-      .header { grid-area: header; }
-      .aside { grid-area: aside; }
-      main section:nth-of-type(1) { grid-area: c; }
-      main section:nth-of-type(2) { grid-area: d; }
-      main section:nth-of-type(3) { grid-area: e; }
-      main section:nth-of-type(4) { grid-area: f; }
-      main section:nth-of-type(5) { grid-area: g; }
-      main section:nth-of-type(6) { grid-area: h; }
-      .main { grid-area: content; }
-      .footer {grid-area: footer; }
-
-    /********************
     * Base Grid
     ******/
       .wrapper {
         align-items: center;
         display: grid;
         grid-template-areas:
-        "header"
-        "aside"
-        "content"
-        "footer";
+        "a"
+        "b"
+        "main"
+        "i";
       }
 
     /********************
@@ -69,75 +68,54 @@
 ******/
   @media (min-width: 768px)
   {
-    /* body {
-      max-width: 960px;
-      min-width: 768px;
-    } */
-
-    div {
-      margin: 0 auto;
-      width: 960px;
-    }
-
     /********************
-    * Header
+    * Base Grid
     ******/
-      header {
-        height: 100px;
-        line-height: 100px;
-        margin: 25px auto 0 auto;
-        outline: 1px solid black;
-        width: 960px;
+      .wrapper {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        grid-template-rows: 4fr;
       }
 
-
     /********************
-    * Aside
+    * Header Grid
     ******/
-      aside {
-        height: 600px;
-        line-height: 600px;
-        float: left;
-        outline: 1px solid black;
-        width: 200px;
+      .header {
+        grid-column: col-start / span 10;
       }
+      
     
+    /********************
+    * Aside Grid
+    ******/
+      .aside {
+        grid-column: col-start / span 2;
+        grid-row: 2 / 4;
+      }
 
     /********************
-    * Main
+    * Main Grid
     ******/
-      main {
-        float: right;
-        outline: 1px solid black;
-        width: 760px;
-      }
-
-      main section:nth-of-type(1), section:nth-of-type(2) {
-        float: left;
-        height: 200px;
-        line-height: 200px;
-        outline: 1px solid black;
-        width: 380px;
-      }
-
-      main section:nth-of-type(3), section:nth-of-type(4), section:nth-of-type(5), section:nth-of-type(6) {
-        float: left;
-        height: 250px;
-        line-height: 250px;
-        outline: 1px solid black;
-        width: 190px;
-      }
-
-
+      .main 
     /********************
-    * Footer
+    * Content Grid
     ******/
-      footer {
-        float: left;
-        height: 150px;
-        line-height: 150px;
-        margin-bottom: 25px;
-        outline: 1px solid black;
-        width: 760px;
-      }
+      /* .main {
+        display: grid;
+        grid-template-columns: 4fr;
+        grid-template-areas:
+        "c c d d"
+        "e f g h"; 
+      } */
+      
+    /********************
+    * Grid item dimensions
+    ******/
+      /* header, aside, section, footer {
+        align-items: center;
+        display: flex;
+        height: 15vh;
+        justify-content: center;
+      } */
   }
