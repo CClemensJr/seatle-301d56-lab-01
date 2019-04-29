@@ -1,71 +1,50 @@
 
 /********************
-* Mobile
+* General
 ******/
+  /********************
+  * Grid Areas
+  ******/
+  
+  /********************
+  * Mobile
+  ******/
   @media (max-width: 768px)
   {
-    /********************
-    * Header
-    ******/
-      header {
-        height: 75px;
-        line-height: 75px;
-        margin: 0 auto;
-        outline: 1px solid black;
-        width: 480px;
-      }
-  
+    .header { grid-area: a; }
+    .aside { grid-area: b; }
+    .section1 { grid-area: c; }
+    .section2 { grid-area: d; }
+    .section3 { grid-area: e; }
+    .section4 { grid-area: f; }
+    .section5 { grid-area: g; }
+    .section6 { grid-area: h; }
+    .footer {grid-area: i; }
 
     /********************
-    * Aside
+    * Base Grid
     ******/
-      aside {
-        height: 150px;
-        line-height: 150px;
-        margin: 0 auto;
-        outline: 1px solid black;
-        width: 480px;
+      .wrapper {
+        align-items: center;
+        display: grid;
+        grid-template-areas:
+        "a a"
+        "b b"
+        "c c"
+        "d d"
+        "e f"
+        "g h"
+        "i i";
       }
-    
+
     /********************
-    * Main
+    * Grid item dimensions
     ******/
-      main {
-        margin: 0 auto;
-        outline: 1px solid black;
-        width: 480px;
-      }
-
-      main section:nth-of-type(1), section:nth-of-type(2) {
-        height: 125px;
-        line-height: 125px;
-        outline: 1px solid black;
-      }
-  
-      main section:nth-of-type(3), section:nth-of-type(4), section:nth-of-type(5), section:nth-of-type(6) {
-        height: 250px;
-        line-height: 250px;
-        outline: 1px solid black;
-        width: 240px;
-      }
-
-      main section:nth-of-type(3), section:nth-of-type(5) {
-        float: left;
-      }
-
-      main section:nth-of-type(4), section:nth-of-type(6) {
-        float: right;
-      }
-  
-    /********************
-    * Footer
-    ******/
-      footer {
-        height: 80px;
-        line-height: 80px;
-        margin: 501px auto 25px auto;
-        outline: 1px solid black;
-        width: 480px;
+      header, aside, section, footer {
+        align-items: center;
+        display: flex;
+        height: 15vh;
+        justify-content: center;
       }
   }
 
@@ -80,75 +59,37 @@
 ******/
   @media (min-width: 768px)
   {
-    /* body {
-      max-width: 960px;
-      min-width: 768px;
-    } */
-
-    div {
-      margin: 0 auto;
-      width: 960px;
-    }
-
-    /********************
-    * Header
-    ******/
-      header {
-        height: 100px;
-        line-height: 100px;
-        margin: 25px auto 0 auto;
-        outline: 1px solid black;
-        width: 960px;
-      }
-
-
-    /********************
-    * Aside
-    ******/
-      aside {
-        height: 600px;
-        line-height: 600px;
-        float: left;
-        outline: 1px solid black;
-        width: 200px;
-      }
+    .header { grid-area: a; }
+    .aside { grid-area: b; }
+    .section1 { grid-area: c; }
+    .section2 { grid-area: d; }
+    .section3 { grid-area: e; }
+    .section4 { grid-area: f; }
+    .section5 { grid-area: g; }
+    .section6 { grid-area: h; }
+    .footer {grid-area: i; }
     
-
     /********************
-    * Main
+    * Base Grid
     ******/
-      main {
-        float: right;
-        outline: 1px solid black;
-        width: 760px;
+      .wrapper {
+        display: grid;
+        grid-template-areas:
+        'a a a a a'
+        'b c c d d'
+        'b e f g h'
+        'b i i i i';
+
+        grid-template-columns: auto auto auto;
+        height: 100%;
       }
-
-      main section:nth-of-type(1), section:nth-of-type(2) {
-        float: left;
-        height: 200px;
-        line-height: 200px;
-        outline: 1px solid black;
-        width: 380px;
-      }
-
-      main section:nth-of-type(3), section:nth-of-type(4), section:nth-of-type(5), section:nth-of-type(6) {
-        float: left;
-        height: 250px;
-        line-height: 250px;
-        outline: 1px solid black;
-        width: 190px;
-      }
-
-
+      
     /********************
-    * Footer
+    * Grid item dimensions
     ******/
-      footer {
-        float: left;
-        height: 150px;
-        line-height: 150px;
-        margin-bottom: 25px;
-        outline: 1px solid black;
-        width: 760px;
+      header, section, footer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
       }
   }

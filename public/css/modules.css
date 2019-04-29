@@ -12,27 +12,27 @@
       background: lightcyan;
     }
 
-    main section:nth-of-type(1) {
+     section:nth-of-type(1) {
       background: lightgoldenrodyellow;
     }
 
-    main section:nth-of-type(2) {
+     section:nth-of-type(2) {
       background: lightgray;
     }
 
-    main section:nth-of-type(3) {
+     section:nth-of-type(3) {
       background: lightgreen;
     }
 
-    main section:nth-of-type(4) {
+     section:nth-of-type(4) {
       background: lightpink;
     }
 
-    main section:nth-of-type(5) {
+     section:nth-of-type(5) {
       background: lightsalmon;
     }
 
-    main section:nth-of-type(6) {
+     section:nth-of-type(6) {
       background: lightseagreen;
     }
 
@@ -56,27 +56,27 @@
       background: blueviolet;
     }
 
-    main section:nth-of-type(1) {
+     section:nth-of-type(1) {
       background: yellow;
     }
 
-    main section:nth-of-type(2) {
+     section:nth-of-type(2) {
       background: yellowgreen;
     }
 
-    main section:nth-of-type(3) {
+     section:nth-of-type(3) {
       background: tan;
     }
 
-    main section:nth-of-type(4) {
+     section:nth-of-type(4) {
       background: teal;
     }
 
-    main section:nth-of-type(5) {
+     section:nth-of-type(5) {
       background: thistle;
     }
 
-    main section:nth-of-type(6) {
+     section:nth-of-type(6) {
       background: aqua;
     }
 
