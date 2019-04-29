@@ -31,16 +31,20 @@ footer {grid-area: i; }
     * General
     ******/
       
-      div {
+      div, main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: .5 1fr 1fr 1fr 1fr .5;
         grid-template-rows: auto;
-        grid-template-areas: 
-        "a a a a"
-        "b b b b"
-        "main main main main"
-        "i i i i";
+      }
 
+      div {
+        grid-template-areas: 
+        ". a a a a ."
+        ". b b b b ."
+        ". main main main main ."
+        ". i i i i .";
+
+        height: 100vh;
       }
 
     /********************
@@ -57,14 +61,11 @@ footer {grid-area: i; }
     * Main
     ******/
       main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
         grid-template-areas: 
-        "c c c c"
-        "d d d d"
-        "e e f f"
-        "g g h h";
+        ". c c c c ."
+        ". d d d d ."
+        ". e e f f ."
+        ". g g h h .";
       }
 
     
@@ -72,7 +73,9 @@ footer {grid-area: i; }
     /********************
     * Footer
     ******/
-
+      footer {
+        height: 25vh;
+      }
   }
 
 
