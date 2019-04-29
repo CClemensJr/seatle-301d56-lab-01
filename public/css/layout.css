@@ -38,18 +38,6 @@
       }
 
     /********************
-    * Content Grid
-    ******/
-      .main {
-        display: grid;
-        grid-template-areas:
-        "c c"
-        "d d"
-        "e f"
-        "g h"; 
-      }
-      
-    /********************
     * Grid item dimensions
     ******/
       header, aside, section, footer {
@@ -93,15 +81,15 @@
         'b i i i i';
 
         grid-template-columns: auto auto auto;
+        height: 100%;
       }
       
     /********************
     * Grid item dimensions
     ******/
-      header, aside, section, footer {
+      header, section, footer {
         align-items: center;
         display: flex;
-        height: 15vh;
         justify-content: center;
       }
   }
