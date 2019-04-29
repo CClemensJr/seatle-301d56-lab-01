@@ -10,6 +10,7 @@ main section:nth-of-type(3) { grid-area: e; }
 main section:nth-of-type(4) { grid-area: f; }
 main section:nth-of-type(5) { grid-area: g; }
 main section:nth-of-type(6) { grid-area: h; }
+main { grid-area: main; }
 footer {grid-area: i; }
 
 
@@ -34,13 +35,18 @@ footer {grid-area: i; }
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
+        grid-template-areas: 
+        "a a a a"
+        "b b b b"
+        "main main main main"
+        "i i i i";
 
       }
 
     /********************
     * Header
     ******/
-  
+
 
     /********************
     * Aside
@@ -50,6 +56,16 @@ footer {grid-area: i; }
     /********************
     * Main
     ******/
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "c c c c"
+        "d d d d"
+        "e e f f"
+        "g g h h";
+      }
 
     
   
